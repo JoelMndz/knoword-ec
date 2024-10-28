@@ -2,9 +2,10 @@
   <VCard
     class="text-white"
     color="primary"
+    @click="$emit('ejecutarAccion')"
   >
     <VImg
-      src="../libro.png"
+      src="/libro.png"
       gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.4)"
       max-height="250"
       cover
@@ -45,17 +46,19 @@
     </VImg>
     <VCardActions>
       <VAvatar 
-        :text="cuestionario._profesor.nombre[0]"
+        :text="cuestionario?._profesor.nombre[0]"
         color="white"
         class="text-overline ms-1"
         size="25"
       /> 
-      {{ cuestionario._profesor.nombre }}
+      {{ cuestionario?._profesor.nombre }}
     </VCardActions>
   </VCard>
 </template>
 
 <script setup lang="ts">
+
+defineEmits(['ejecutarAccion'])
 
 defineProps({
   cuestionario:{

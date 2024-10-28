@@ -129,7 +129,7 @@ const procesarFormulario = ()=>{
   cargando.value = true
   cuestionarStore.crearCuestionario({
     ...campos,
-    _profesor: (useAuth().data.value as SessionType)._id!,
+    _profesor: (useAuth().data.value as SessionType)._id! as any,
     categoria: campos.categoria!
   })
   cargando.value = false

@@ -5,6 +5,7 @@
       <VCol cols="6" sm="4" md="3"v-for="i in (data as ICuestionario[])">
         <CardCuestionario
           :cuestionario="i"
+          @ejecutar-accion="navigateTo('/app/estudiante/juego/'+i._id)"
         >
 
         </CardCuestionario>
