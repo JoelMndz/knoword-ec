@@ -40,6 +40,7 @@ export const useJuegoEstudiante = defineStore('juegoEstudianteStore',{
     terminaJuego(){
       this.estado = EstadosJuego.Terminado
       this.fin = moment()
+      this.guadarJuego()
     },
     restablecerValores(){
       this.inicio = null
@@ -50,7 +51,21 @@ export const useJuegoEstudiante = defineStore('juegoEstudianteStore',{
       this.respuestas = []
     },
     async guadarJuego(){
-      
+      await $fetch('/api/juego',{
+        method: 'POST',
+        body: {
+          _cuestionario: this.cuestionarioActual?._id,
+          _estudiante: (useAuth().data.value as any)?._id,
+          inicio: this.inicio,
+          fin: this.fin,
+          respuestas: this.cuestionarioActual?.palabras.map((x,i) =>{
+            return {
+              _palabra: x._id, 
+              correcta: i < this.respuestas.length ? this.respuestas[i] : false
+            }
+          })
+        }
+      })
     }
   },
   getters:{
