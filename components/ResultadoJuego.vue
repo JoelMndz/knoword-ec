@@ -30,7 +30,7 @@
               <VDivider vertical thickness="3" />
               <VCol cols="auto">
                 <p class="text-grey">Preguntas correctas</p>
-                <p class="text-h4 ">{{resultadoJuego.respuestasCorrectas}}</p>
+                <p class="text-h4 ">{{resultadoJuego.respuestasCorrectas}}/{{ cuestionarioActual?.palabras.length }}</p>
               </VCol>
               <VDivider vertical thickness="3" />
               <VCol>

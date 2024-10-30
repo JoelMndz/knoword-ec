@@ -1,4 +1,3 @@
-import type { Session } from "next-auth";
 import type { SessionType } from "~/server/api/auth/[...]";
 
 

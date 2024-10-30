@@ -1,6 +1,6 @@
 <template>
   <VCard
-    title="Agregar una palabra"
+    title="Agregar palabra al diccionario"
   >
     <VCardText>
       <VForm
@@ -9,7 +9,7 @@
       >
         <label>Palabra:</label>
         <VTextField 
-          v-model="campos.palabra"
+          v-model="campos.nombre"
           :rules="reglas.campoObligatorio"
           class="mt-2"
         />
@@ -20,19 +20,13 @@
           rows="2"
           class="mt-2"
         />
-        <label>Tipo:</label>
-        <VSelect 
-          v-model="campos.tipo"
-          :rules="reglas.campoObligatorio"
-          :items="['noun','adjetive']"
-          class="mt-2"
-        />
         <VRow class="mt-5">
           <VSpacer />
           <VCol cols="auto">
             <VBtn 
               text="Guardar palabra"
               type="submit"
+              :loading="cargando"
             />
           </VCol>
         </VRow>
@@ -44,18 +38,14 @@
 <script setup lang="ts">
 import type { VForm } from 'vuetify/components';
 
-const emit = defineEmits(['procesarFormulario'])
-
+const diccionarioStore = useDiccionarioStore()
 const formulario = ref<VForm | null>(null)
-const campos = reactive<{
-  palabra: string
-  definicion: string
-  tipo: string | null
-}>({
-  palabra: '',
+const cargando = ref(false)
+const campos = reactive({
+  nombre: '',
   definicion: '',
-  tipo: null
 })
+
 const reglas = {
   campoObligatorio: [
     (v: string) => !!v || 'Campo obligatorio!'
@@ -65,11 +55,15 @@ const reglas = {
 const procesarFormulario = async()=>{
   const {valid} = await formulario.value!.validate()
   if(!valid) return;
-  emit('procesarFormulario',{
-    ...campos,
-    tipo: campos.tipo!
-  })
+  cargando.value = true
+  await diccionarioStore.guardarPalabra(campos)
+  cargando.value = false
+  diccionarioStore.cerrarFormulario()
 }
+
+onUnmounted(()=>{
+  diccionarioStore.cerrarFormulario()
+})
 </script>
 
 <style scoped>

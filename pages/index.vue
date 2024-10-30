@@ -52,7 +52,7 @@ import type { SessionType } from '~/server/api/auth/[...]';
 
 
 
-const {data, signIn} = useAuth()
+const {data, signIn, signOut} = useAuth()
 const campos = reactive({
   email: '',
   password: ''
@@ -71,8 +71,6 @@ const procesarFormulario = async()=>{
   }
 }
 
-onMounted(()=>{
-})
 </script>
 
 <style scoped>

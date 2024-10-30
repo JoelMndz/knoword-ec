@@ -34,7 +34,7 @@
                 icon="mdi-delete"
                 variant="text"
                 color="error"
-                @click="eliminarPalabra(indice)"
+                @click="eliminarPalabra(i)"
               />
             </template>
           </VCard>
@@ -63,8 +63,15 @@ const agregarPalabra = (palabra:{palabra:string, definicion: string, tipo: strin
   mostrarFormularioPalabra.value = false
 }
 
-const eliminarPalabra = (indice: number)=>{
-  cuestionario.value.palabras = cuestionario.value.palabras.filter((i,index) => index !== indice)
+const eliminarPalabra = async(i: {_id?: string})=>{
+  cuestionario.value.palabras = cuestionario.value.palabras.filter((x) => x._id !== i._id)
+  await useFetch('/api/cuestionario/palabra/eliminar',{
+    method:'PUT',
+    body:{
+      _cuestionario: cuestionario.value._id,
+      _palabra: i._id
+    }
+  })
 }
 </script>
 

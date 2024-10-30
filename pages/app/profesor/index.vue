@@ -15,7 +15,7 @@
       </VCol>
     </VRow>
     <VRow>
-      <VCol cols="4" v-for="i in cuestionarios">
+      <VCol cols="6" sm="4" md="3" v-for="i in cuestionarios">
         <CardCuestionario 
           :cuestionario="i"
         >

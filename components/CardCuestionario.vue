@@ -11,13 +11,11 @@
       cover
     >
       <VCardText>
-        <VRow>
-          <VCol>
-            <h1 class="text-h4">
-              {{ cuestionario?.nombre }}
-            </h1>
-          </VCol>
-          <VCol cols="auto" v-if="$slots.opcionesMenu">
+        <div class="container">
+          <h1 class="text-h4 text-start">
+            {{ cuestionario?.nombre }}
+          </h1>
+          <div class="menu" v-if="$slots.opcionesMenu">
             <v-menu>
               <template v-slot:activator="{ props }">
                 <VBtn
@@ -32,10 +30,10 @@
                 </slot>
               </v-list>
             </v-menu>
-          </VCol>
-        </VRow>
+          </div>
+        </div>
         <VFab 
-          :text="`${cuestionario?.palabras.length}`"
+          :text="`${cuestionario?.palabras.length} terms`"
           size="small"
           location="bottom end"
           absolute
@@ -69,5 +67,17 @@ defineProps({
 </script>
 
 <style scoped>
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.menu {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+}
 </style>
