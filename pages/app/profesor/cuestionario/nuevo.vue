@@ -32,17 +32,19 @@
       <VCol cols="4">
         <VSelect 
           label="Categoria"
-          :items="['Arte 🎭']"
+          :items="['Arte 🎭','Ciencias 🦠','Matemáticas ➕','Lenguaje 📚']"
           v-model="campos.categoria"
           :rules="campoRequerido"
         />
       </VCol>
     </VRow>
-    <VRow>
+    <VRow align="center">
       <VCol>
         <VTextField 
           prepend-inner-icon="mdi-magnify"
           clearable
+          v-model.trim="filtro"
+          hide-details
         />
       </VCol>
       <VCol cols="auto">
@@ -60,7 +62,7 @@
     <VRow>
       <TransitionGroup name="palabras">
         <VCol 
-          v-for="(i, indice) in campos.palabras"
+          v-for="(i, indice) in !filtro ? campos.palabras : campos.palabras.filter(x => x.palabra.toLocaleLowerCase().includes(filtro.toLocaleLowerCase()))"
           cols="12"
           :key="indice">
           <VCard 
@@ -112,14 +114,9 @@ const campos = reactive<{
 }>({
   nombre: '',
   categoria: null,
-  palabras: [
-    {
-      palabra: 'Test1',
-      definicion:" es un trest?",
-      tipo:"noun"
-    }
-  ]
+  palabras: []
 })
+const filtro = ref('')
 
 const campoRequerido = [
   (v: string) => !!v || 'Campo requerido!'

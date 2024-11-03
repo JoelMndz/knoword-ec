@@ -6,11 +6,17 @@
     class="text-h3 text-md-h2"
   >
     <VCol cols="auto">
-      <p>{{ palabraActual?.definicion }}</p>
+      <VFadeTransition mode="out-in">
+        <p :key="palabraActual?._id">
+          <span class="text-h4 font-weight-black" v-if="palabraActual?.tipo">{{ palabraActual.tipo }}.</span>
+          {{ palabraActual?.definicion }}
+        </p>
+      </VFadeTransition>
     </VCol>
   </VRow>
   <div class="progress-container">
     <VProgressCircular
+      v-if="tiempo != null"
       class="text-h4 progress-circular"
       size="100"
       rotate="360"
@@ -20,6 +26,15 @@
     >
       <span color="red">{{ formatearTiempo }}</span>
     </VProgressCircular>
+    <VProgressCircular
+      v-else
+      class="progress-circular"
+      size="100"
+      rotate="360"
+      :model-value="medirPorcentajeTiempo.porcentaje"
+      :color="medirPorcentajeTiempo.color"
+      width="5"
+    />
     <VProgressLinear
       :color="medirPorcentajeAcierto.error ? '#DC2626':'green'"
       :model-value="medirPorcentajeAcierto.porcentaje"
@@ -56,7 +71,7 @@ import confetti from 'canvas-confetti';
 const juegoStore = useJuegoEstudiante()
 const { tiempo, palabraActual } = storeToRefs(juegoStore)
 const respuesta = ref('')
-
+const audioCorrecto = new Audio('/correcto.mp3')
 const tiempoRestante = ref(0)
 const idIntervalo = ref<any>(null)
 
@@ -115,6 +130,7 @@ const saltarPregunta = ()=>{
 
 watch(respuesta,(nuevo,anterior)=>{
   if(nuevo.toLocaleLowerCase() === palabraActual.value?.palabra.toLocaleLowerCase()){
+    audioCorrecto.play()
     lanzarConfeti()
     juegoStore.siguientePalabra(true)
     respuesta.value = ''

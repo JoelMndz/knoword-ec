@@ -7,10 +7,12 @@ export const JuegoSchema = defineMongooseModel({
     _cuestionario:{
       type: Types.ObjectId,
       required: true,
+      ref:'cuestionario'
     },
     _estudiante:{
       type: Types.ObjectId,
       required: true,
+      ref: 'usuario'
     },
     inicio: {
       type: Date,

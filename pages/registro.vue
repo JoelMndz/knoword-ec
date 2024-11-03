@@ -10,6 +10,11 @@
               @submit.prevent="procesarFormulario"
               :readonly="cargando"
               >
+              <ErrorAlert
+                v-if="error"
+                :texto="error"
+                class="mb-3"
+              />
               <label>Nombre:</label>
               <VTextField 
                 v-model.trim="campos.nombre"
@@ -67,6 +72,7 @@ import type { VForm } from 'vuetify/components';
 import { Rol } from '~/server/constants';
 
 const formulario = ref<VForm | null>(null)
+const error = ref<string|null>(null)
 const campos = reactive({
   nombre: '',
   email: '',
@@ -91,12 +97,16 @@ const procesarFormulario = async()=>{
   const {valid} = await formulario.value!.validate()
   if(!valid) return;
   cargando.value = true
-  const {data,error} = await useFetch('/api/autenticacion/registro',{
+  const respuesta = await useFetch('/api/autenticacion/registro',{
     method:'POST',
     body: campos
   })
   cargando.value = false
-  navigateTo('/')
+  if(respuesta.error.value){
+    error.value = respuesta.error.value.statusMessage
+  }else{
+    navigateTo('/')
+  }
 }
 </script>
 

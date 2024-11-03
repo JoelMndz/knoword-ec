@@ -13,8 +13,8 @@ export const useDiccionarioStore = defineStore('diccionarioStore',{
   }),
   actions:{
     async obtenerPalabras(){
-      const respuesta = await $fetch('/api/diccionario/'+(useAuth().data.value as SessionType)._id)
-      this.palabras = respuesta as IPalabraDiccionario[]
+      const respuesta = await useFetch('/api/diccionario/'+(useAuth().data.value as SessionType)._id,{method:'GET'})
+      this.palabras = respuesta.data.value as IPalabraDiccionario[]
     },
     async guardarPalabra(body:{nombre: string, definicion: string}){
       const palabra = await $fetch('/api/diccionario',{
@@ -25,6 +25,12 @@ export const useDiccionarioStore = defineStore('diccionarioStore',{
         }
       })
       this.palabras.push(palabra as IPalabraDiccionario)
+    },
+    async eliminarPalabra(_id:string){
+      await $fetch('/api/diccionario/eliminar/'+_id,{
+        method:'delete'
+      })
+      this.palabras = this.palabras.filter(x => x._id !== _id)
     },
     abrirFormulario(){
       this.mostrarFormulario = true

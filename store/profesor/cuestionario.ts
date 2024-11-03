@@ -21,6 +21,12 @@ export const useCuestionarioProfesorStore = defineStore('cuestionarioProfesorSto
     async obtenerCuestionarios(){
       const data = await $fetch('/api/cuestionario/por-profesor/'+(useAuth().data.value as SessionType)._id)
       this.cuestionarios = data as ICuestionario[]
+    },
+    async eliminarCuestionario(id: string){
+      await $fetch('/api/cuestionario/eliminar/'+id,{
+        method:'DELETE'
+      })
+      this.cuestionarios = this.cuestionarios.filter(x => x._id !== id)
     }
   },
 })
