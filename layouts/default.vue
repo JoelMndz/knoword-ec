@@ -51,6 +51,11 @@ const {signOut, data} = useAuth()
 const usuario:any= computed(() => data.value)
 </script>
 
-<style scoped>
-
+<style>
+.v-application{
+  /* background-image: url('https://png.pngtree.com/background/20220727/original/pngtree-seamless-pattern-school-supplies-picture-image_1841808.jpg'); */
+  background-image: url('https://marketplace.canva.com/EAFftOHllXc/1/0/1600w/canva-fondo-virtual-para-zoom-divertido-blanco-y-negro-pRsyK9xsZR0.jpg');
+  /* filter: brightness(0.5); */
+  background-size: auto;
+}
 </style>

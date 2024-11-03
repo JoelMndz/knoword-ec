@@ -38,7 +38,9 @@
         <VRow class="text-center mt-5" justify="space-between" align="center">
           <VCol cols="4" lg="5">
             <p  class="text-h6 mb-1">Modo de juego</p>
-            <p class="text-md-h2 text-h3 mb-1">Clásico</p>
+            <p class="text-md-h2 text-h3 mb-1 d-flex justify-center align-center">Clásico
+              <img class="ms-1" height="40" src="/ninoFeliz.png" >
+            </p>
             <p>Adivina la palabra basándote en su definición y primera letra.</p>
           </VCol>
           <VCol cols="4" md="3" lg="2">
