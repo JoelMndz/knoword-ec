@@ -15,28 +15,28 @@
       <VCol cols="auto">
         <VBtn 
           text="Guardar cuestionario"
-          :disabled="campos.palabras.length === 0 || !campos.nombre || !campos.categoria"
+          :disabled="campos.palabras.length === 0 || !campos.nombre"
           :loading="cargando"
           @click="procesarFormulario"
         />
       </VCol>
     </VRow>
     <VRow>
-      <VCol cols="8">
+      <VCol>
         <VTextField 
           label="Nombre"
           v-model="campos.nombre"
           :rules="campoRequerido"
         /> 
       </VCol>
-      <VCol cols="4">
+      <!-- <VCol cols="4">
         <VSelect 
           label="Categoria"
           :items="['Arte 🎭','Ciencias 🦠','Matemáticas ➕','Lenguaje 📚']"
           v-model="campos.categoria"
           :rules="campoRequerido"
         />
-      </VCol>
+      </VCol> -->
     </VRow>
     <VRow align="center">
       <VCol>
@@ -109,11 +109,9 @@ const mostrarFormularioPalabra = ref(false)
 const cargando = ref(false)
 const campos = reactive<{
   nombre: string
-  categoria: string | null
   palabras: IPalabra[]
 }>({
   nombre: '',
-  categoria: null,
   palabras: []
 })
 const filtro = ref('')
@@ -126,8 +124,7 @@ const procesarFormulario = ()=>{
   cargando.value = true
   cuestionarStore.crearCuestionario({
     ...campos,
-    _profesor: (useAuth().data.value as SessionType)._id! as any,
-    categoria: campos.categoria!
+    _profesor: (useAuth().data.value as SessionType)._id! as any
   })
   cargando.value = false
 }

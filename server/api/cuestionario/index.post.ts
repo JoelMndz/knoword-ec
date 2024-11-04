@@ -2,7 +2,6 @@
 interface IBody{
   nombre: string
   _profesor: string
-  categoria: string
   palabras:{
     palabra: string
     definicion: string
@@ -15,7 +14,6 @@ export default defineEventHandler(async(event)=>{
   const cuestionario = new CuestionarioSchema({
     nombre: body.nombre,
     _profesor: body._profesor,
-    categoria: body.categoria,
     palabras: body.palabras,
   })
   await cuestionario.save()

@@ -9,11 +9,6 @@ export const CuestionarioSchema = defineMongooseModel({
       required: true,
       trim: true
     },
-    categoria:{
-      type: String,
-      required: true,
-      trim: true
-    },
     _profesor:{
       type: Types.ObjectId,
       required: true,

@@ -3,21 +3,23 @@
     <VAppBar>
       <VBtn
         @click="navigateTo('/')"
-        to="/"
-        variant="tonal"
-      >Knoword EC</VBtn>
+        class="text-h5"
+        variant="text"
+        color="black"
+      >Learning Words</VBtn>
       <template v-if="usuario?.rol === Rol.Estudiante">
         <VBtn 
-          to="/app/estudiante"
+          @click="navigateTo('/app/estudiante')"
           text="Cuestionario"
           variant="text"
-          class="ms-5"
+          color="black"
         />
         <VBtn 
-          to="/app/estudiante/diccionario"
+          @click="navigateTo('/app/estudiante/diccionario')"
           text="Diccionario"
           variant="text"
           class="mx-3"
+          color="black"
         />
       </template>
       <template v-if="data" #append>

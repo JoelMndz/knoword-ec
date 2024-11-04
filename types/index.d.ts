@@ -9,7 +9,6 @@ declare global{
       nombre: string
       email: string
     }
-    categoria: string
     palabras:{
       _id?: string
       palabra: string
