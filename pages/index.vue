@@ -29,11 +29,10 @@
                 
               />
               <label>Password:</label>
-              <VTextField 
-                v-model="campos.password"
-                label="Password"
-                type="password"
+              <InputPassword 
+                v-model:model.trim="campos.password"
                 class="mt-2"
+                placeholder="Ingresa la contraseña"
               />
               <VBtn 
                 text="Ingresar"

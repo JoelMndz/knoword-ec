@@ -60,6 +60,14 @@
         </VRow>
       </VCol>
     </VRow>
+    <v-fab
+      icon="mdi-arrow-left"
+      class="ms-4 mb-4"
+      location="top start"
+      size="64"
+      absolute
+      app
+    />
 </template>
 
 <script setup lang="ts">

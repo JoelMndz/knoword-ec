@@ -32,11 +32,10 @@
                 placeholder="Ingresa tu email"
               />
               <label>Password:</label>
-              <VTextField 
-                v-model.trim="campos.password"
-                label="Password"
-                type="password"
+              <InputPassword 
+                v-model:model.trim="campos.password"
                 class="mt-2"
+                placeholder="Ingresa la contraseña"
                 :rules="reglas.password"
               />
               <label>Eres un:</label>
@@ -103,7 +102,7 @@ const procesarFormulario = async()=>{
   })
   cargando.value = false
   if(respuesta.error.value){
-    error.value = respuesta.error.value.statusMessage
+    error.value = respuesta.error.value.statusMessage as string
   }else{
     navigateTo('/')
   }

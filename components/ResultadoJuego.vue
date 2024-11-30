@@ -8,11 +8,18 @@
         <div>
           <h1 class="text-h2 mt-3">BUEN INTENTO</h1>
           <VBtn 
+            text="Ir al inicio"
+            color="error"
+            class="mt-4"
+            @click="$router.push('/')"
+          />
+          <VBtn 
             text="Jugar de nuevo"
             color="secondary"
-            class="text-black mt-4"
+            class="text-black mt-4 ms-2"
             @click="juegoStore.restablecerValores()"
           />
+          
         </div>
       </VCol>
     </VRow>
