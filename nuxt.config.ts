@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     transpile: ['vuetify']
   },
   auth:{
-    baseURL: process.env.DOMAIN,   
+    baseURL: process.env.DOMAIN
   },
   mongoose:{
     uri: process.env.MONGO_URI,
