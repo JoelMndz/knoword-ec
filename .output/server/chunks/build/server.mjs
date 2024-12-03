@@ -707,12 +707,12 @@ const _routes = [
   {
     name: "app-profesor-cuestionario-detalle-id",
     path: "/app/profesor/cuestionario/detalle/:id()",
-    component: () => import('./_id_-BM1AG46t.mjs')
+    component: () => import('./_id_-0re3yjIo.mjs')
   },
   {
     name: "app-profesor-cuestionario-nuevo",
     path: "/app/profesor/cuestionario/nuevo",
-    component: () => import('./nuevo-BWjhD1QD.mjs')
+    component: () => import('./nuevo-DLYFc6PB.mjs')
   },
   {
     name: "app-profesor",

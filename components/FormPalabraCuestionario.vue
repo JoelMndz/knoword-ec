@@ -24,7 +24,7 @@
         <VSelect 
           v-model="campos.tipo"
           :rules="reglas.campoObligatorio"
-          :items="['verbs','simple answer']"
+          :items="['noun','adjetive','verbs','simple answer']"
           class="mt-2"
         />
         <VRow class="mt-5">

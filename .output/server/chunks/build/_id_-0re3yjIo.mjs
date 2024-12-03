@@ -1,4 +1,4 @@
-import { _ as _sfc_main$1 } from './FormPalabraCuestionario-bC1XVlDV.mjs';
+import { _ as _sfc_main$1 } from './FormPalabraCuestionario-2SGxZR6e.mjs';
 import { useSSRContext, defineComponent, withAsyncContext, ref, resolveComponent, withCtx, unref, isRef, createVNode, createTextVNode, mergeProps, TransitionGroup, openBlock, createBlock, Fragment, renderList, toDisplayString } from 'vue';
 import { ssrRenderComponent, ssrInterpolate, ssrRenderList } from 'vue/server-renderer';
 import { u as useFetch } from './fetch-RaUMkSJ3.mjs';
@@ -621,4 +621,4 @@ _sfc_main.setup = (props, ctx) => {
 const _id_ = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-c00fc943"]]);
 
 export { _id_ as default };
-//# sourceMappingURL=_id_-BM1AG46t.mjs.map
+//# sourceMappingURL=_id_-0re3yjIo.mjs.map

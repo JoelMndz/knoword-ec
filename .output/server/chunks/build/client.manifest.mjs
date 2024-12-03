@@ -14,72 +14,12 @@ const client_manifest = {
     "file": "BgQvoqQB.js",
     "name": "index"
   },
-  "_C3gZlynj.js": {
+  "_BpzrRnGy.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "C3gZlynj.js",
-    "name": "fetch",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ]
-  },
-  "_C5S46NFB.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "C5S46NFB.js",
-    "name": "moment"
-  },
-  "_CLJ2Jbwv.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "CLJ2Jbwv.js",
-    "name": "InputPassword.vue",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ]
-  },
-  "_CYl4Bea9.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "CYl4Bea9.js",
-    "name": "FormPalabraCuestionario.vue",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ]
-  },
-  "_Dvz_1bMI.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "Dvz_1bMI.js",
-    "name": "vue.8fc199ce",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ]
-  },
-  "_XqKEbuup.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "XqKEbuup.js",
-    "name": "index"
-  },
-  "_o6MVvimY.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "o6MVvimY.js",
+    "file": "BpzrRnGy.js",
     "name": "CardCuestionario",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
@@ -94,13 +34,73 @@ const client_manifest = {
     "prefetch": true,
     "preload": true
   },
-  "_xZELp0by.js": {
+  "_C5S46NFB.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "xZELp0by.js",
+    "file": "C5S46NFB.js",
+    "name": "moment"
+  },
+  "_CJXxmimj.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "CJXxmimj.js",
+    "name": "fetch",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "_DG6hG6rJ.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "DG6hG6rJ.js",
+    "name": "FormPalabraCuestionario.vue",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "_DWuPhUhz.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "DWuPhUhz.js",
     "name": "cuestionario",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "_DiCv6_0D.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "DiCv6_0D.js",
+    "name": "vue.8fc199ce",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "_XqKEbuup.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "XqKEbuup.js",
+    "name": "index"
+  },
+  "_koVc5S1I.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "koVc5S1I.js",
+    "name": "InputPassword.vue",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -110,7 +110,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "CdBOfpvo.js",
+    "file": "B-Q8AuJy.js",
     "name": "default",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
@@ -155,13 +155,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Cg9Z2rtZ.js",
+    "file": "BKt7sH0m.js",
     "name": "error-404",
     "src": "node_modules/nuxt/dist/app/components/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_Dvz_1bMI.js"
+      "_DiCv6_0D.js"
     ],
     "css": []
   },
@@ -176,13 +176,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "D7J_t_Pl.js",
+    "file": "Z_UTBKtc.js",
     "name": "error-500",
     "src": "node_modules/nuxt/dist/app/components/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_Dvz_1bMI.js"
+      "_DiCv6_0D.js"
     ],
     "css": []
   },
@@ -197,7 +197,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BlbsmEqZ.js",
+    "file": "DW4sSLmw.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
@@ -222,13 +222,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "CSW2VAq-.js",
+    "file": "ikxbfsuR.js",
     "name": "index",
     "src": "pages/app/estudiante/diccionario/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_C3gZlynj.js",
+      "_CJXxmimj.js",
       "_C5S46NFB.js"
     ]
   },
@@ -237,14 +237,14 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "qjbMWGJi.js",
+    "file": "BkdXzQHs.js",
     "name": "index",
     "src": "pages/app/estudiante/index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_o6MVvimY.js",
+      "_BpzrRnGy.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_C3gZlynj.js"
+      "_CJXxmimj.js"
     ]
   },
   "pages/app/estudiante/juego/[id].vue": {
@@ -252,15 +252,15 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "CBCYuVkZ.js",
+    "file": "DoaMtjfB.js",
     "name": "_id_",
     "src": "pages/app/estudiante/juego/[id].vue",
     "isDynamicEntry": true,
     "imports": [
-      "_o6MVvimY.js",
+      "_BpzrRnGy.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_C5S46NFB.js",
-      "_C3gZlynj.js",
+      "_CJXxmimj.js",
       "_XqKEbuup.js"
     ],
     "css": [
@@ -278,14 +278,14 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "D5Awla-M.js",
+    "file": "2z6jYfbR.js",
     "name": "_id_",
     "src": "pages/app/profesor/cuestionario/detalle/[id].vue",
     "isDynamicEntry": true,
     "imports": [
-      "_CYl4Bea9.js",
+      "_DG6hG6rJ.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_C3gZlynj.js"
+      "_CJXxmimj.js"
     ],
     "css": []
   },
@@ -300,14 +300,14 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "syEbJ4NH.js",
+    "file": "CPdAxw-G.js",
     "name": "nuevo",
     "src": "pages/app/profesor/cuestionario/nuevo.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_CYl4Bea9.js",
+      "_DG6hG6rJ.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_xZELp0by.js"
+      "_DWuPhUhz.js"
     ],
     "css": []
   },
@@ -322,7 +322,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DWTXe0ja.js",
+    "file": "Dw_Nqsaj.js",
     "name": "index",
     "src": "pages/app/profesor/index.vue",
     "isDynamicEntry": true,
@@ -330,8 +330,8 @@ const client_manifest = {
       "_XqKEbuup.js",
       "_C5S46NFB.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_o6MVvimY.js",
-      "_xZELp0by.js"
+      "_BpzrRnGy.js",
+      "_DWuPhUhz.js"
     ]
   },
   "pages/index.vue": {
@@ -339,12 +339,12 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DAxCye1n.js",
+    "file": "B7xoYawv.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_CLJ2Jbwv.js",
+      "_koVc5S1I.js",
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
@@ -353,15 +353,15 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DaZE5CyS.js",
+    "file": "yYu6o46B.js",
     "name": "registro",
     "src": "pages/registro.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_CLJ2Jbwv.js",
+      "_koVc5S1I.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_BgQvoqQB.js",
-      "_C3gZlynj.js"
+      "_CJXxmimj.js"
     ]
   }
 };

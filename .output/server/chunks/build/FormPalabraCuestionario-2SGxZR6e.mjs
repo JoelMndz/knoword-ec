@@ -71,7 +71,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                           modelValue: unref(campos).tipo,
                           "onUpdate:modelValue": ($event) => unref(campos).tipo = $event,
                           rules: reglas.campoObligatorio,
-                          items: ["verbs", "simple answer"],
+                          items: ["noun", "adjetive", "verbs", "simple answer"],
                           class: "mt-2"
                         }, null, _parent4, _scopeId3));
                         _push4(ssrRenderComponent(_component_VRow, { class: "mt-5" }, {
@@ -135,7 +135,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                             modelValue: unref(campos).tipo,
                             "onUpdate:modelValue": ($event) => unref(campos).tipo = $event,
                             rules: reglas.campoObligatorio,
-                            items: ["verbs", "simple answer"],
+                            items: ["noun", "adjetive", "verbs", "simple answer"],
                             class: "mt-2"
                           }, null, 8, ["modelValue", "onUpdate:modelValue", "rules"]),
                           createVNode(_component_VRow, { class: "mt-5" }, {
@@ -186,7 +186,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                           modelValue: unref(campos).tipo,
                           "onUpdate:modelValue": ($event) => unref(campos).tipo = $event,
                           rules: reglas.campoObligatorio,
-                          items: ["verbs", "simple answer"],
+                          items: ["noun", "adjetive", "verbs", "simple answer"],
                           class: "mt-2"
                         }, null, 8, ["modelValue", "onUpdate:modelValue", "rules"]),
                         createVNode(_component_VRow, { class: "mt-5" }, {
@@ -242,7 +242,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                         modelValue: unref(campos).tipo,
                         "onUpdate:modelValue": ($event) => unref(campos).tipo = $event,
                         rules: reglas.campoObligatorio,
-                        items: ["verbs", "simple answer"],
+                        items: ["noun", "adjetive", "verbs", "simple answer"],
                         class: "mt-2"
                       }, null, 8, ["modelValue", "onUpdate:modelValue", "rules"]),
                       createVNode(_component_VRow, { class: "mt-5" }, {
@@ -282,4 +282,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as _ };
-//# sourceMappingURL=FormPalabraCuestionario-bC1XVlDV.mjs.map
+//# sourceMappingURL=FormPalabraCuestionario-2SGxZR6e.mjs.map

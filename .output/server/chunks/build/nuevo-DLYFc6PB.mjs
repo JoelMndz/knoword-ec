@@ -1,4 +1,4 @@
-import { _ as _sfc_main$1 } from './FormPalabraCuestionario-bC1XVlDV.mjs';
+import { _ as _sfc_main$1 } from './FormPalabraCuestionario-2SGxZR6e.mjs';
 import { useSSRContext, defineComponent, ref, reactive, resolveComponent, withCtx, unref, createVNode, isRef, createTextVNode, TransitionGroup, openBlock, createBlock, Fragment, renderList } from 'vue';
 import { ssrRenderComponent, ssrRenderList } from 'vue/server-renderer';
 import { u as useCuestionarioProfesorStore } from './cuestionario-B0MM_laY.mjs';
@@ -548,4 +548,4 @@ _sfc_main.setup = (props, ctx) => {
 const nuevo = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-2dc4ccbb"]]);
 
 export { nuevo as default };
-//# sourceMappingURL=nuevo-BWjhD1QD.mjs.map
+//# sourceMappingURL=nuevo-DLYFc6PB.mjs.map
