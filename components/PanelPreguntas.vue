@@ -107,13 +107,13 @@ const medirPorcentajeAcierto = computed(()=>{
 })
 
 const lanzarConfeti = ()=>{
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { x: 0.5, y: 0.5 },
-      colors: ['#ff0', '#0ff', '#f0f'] // Colores personalizables
-    });
-  }
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { x: 0.5, y: 0.5 },
+    colors: ['#ff0', '#0ff', '#f0f'] // Colores personalizables
+  });
+}
 
 const medirPorcentajeTiempo = computed(()=>{
   const resultado = {porcentaje: 100, color:'green'}

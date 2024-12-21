@@ -65,6 +65,7 @@
       class="ms-4 mb-4"
       location="top start"
       size="64"
+      @click="navigateTo('/')"
       absolute
       app
     />

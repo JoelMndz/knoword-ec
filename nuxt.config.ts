@@ -17,6 +17,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify']
   },
+  runtimeConfig:{
+    TOKEN_CHATGPT: process.env.TOKEN_CHATGPT
+  },
   auth:{
     baseURL: process.env.DOMAIN
   },

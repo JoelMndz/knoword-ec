@@ -21,6 +21,13 @@
           class="mx-3"
           color="black"
         />
+        <VBtn 
+          @click="navigateTo('/app/estudiante/juego-oraciones')"
+          text="Juego Oraciones"
+          variant="text"
+          class="mx-3"
+          color="black"
+        />
       </template>
       <template v-if="data" #append>
         <VBtn
