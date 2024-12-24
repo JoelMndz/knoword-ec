@@ -6,6 +6,7 @@
           <VCard 
             class="py-10"
             variant="tonal"
+            color="success"
             @click="generarOracionesConIA()">
             <p class="text-md-h2 text-center text-h3 mb-2">Comenzar juego</p>
           </VCard>
