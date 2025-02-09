@@ -1,11 +1,13 @@
 <template>
   <VApp>
-    <VAppBar>
+    <VAppBar
+      :color="usuario?.rol === Rol.Profesor ? 'primary' : undefined"
+    >
       <VBtn
         @click="navigateTo('/')"
         class="text-h5"
         variant="text"
-        color="black"
+        :color="usuario?.rol === Rol.Profesor ? 'onPrimary' : 'black'"
       >Learning Words</VBtn>
       <template v-if="usuario?.rol === Rol.Estudiante">
         <VBtn 
@@ -42,7 +44,7 @@
           class="me-3"
           size="small"
           @click="signOut()"
-          variant="tonal"/>
+          variant="elevated"/>
       </template>
     </VAppBar>
     <VMain>
