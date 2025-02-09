@@ -2,7 +2,7 @@
     <VRow>
       <VCol>
         <div class="d-flex align-center justify-center">
-          <p class="text-h6 me-3">Límite de tiempo</p>
+          <p class="text-h6 me-3">Time limit</p>
           <VSwitch 
             color="primary" 
             hide-details
@@ -28,7 +28,7 @@
             />
           </template>
           <template v-else>
-            <p class="text-h2">Ninguno</p>
+            <p class="text-h2">None</p>
           </template>
         </div>
         <VRow class="ma-0 pa-0" justify="center">
@@ -37,11 +37,11 @@
         </VRow>
         <VRow class="text-center mt-5" justify="space-between" align="center">
           <VCol cols="4" lg="5">
-            <p  class="text-h6 mb-1">Modo de juego</p>
-            <p class="text-md-h2 text-h3 mb-1 d-flex justify-center align-center">Clásico
+            <p  class="text-h6 mb-1">Game mode</p>
+            <p class="text-md-h2 text-h3 mb-1 d-flex justify-center align-center">Clasic
               <img class="ms-1" height="40" src="/ninoFeliz.png" >
             </p>
-            <p>Adivina la palabra basándote en su definición y primera letra.</p>
+            <p>Guess the word based on its definition and first letter.</p>
           </VCol>
           <VCol cols="4" md="3" lg="2">
             <CardCuestionario 
@@ -53,7 +53,7 @@
               class="py-10"
               variant="text"
               @click="empezarJuego">
-              <p class="text-md-h2 text-h3 mb-2">Comenzar juego</p>
+              <p class="text-md-h2 text-h3 mb-2">Start game</p>
               <p>Presiona <VBtn color="grey" size="x-small" text="enter"/></p>
             </VCard>
           </VCol>

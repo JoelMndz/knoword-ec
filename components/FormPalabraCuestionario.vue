@@ -1,26 +1,26 @@
 <template>
   <VCard
-    title="Agregar una palabra"
+    title="Add word"
   >
     <VCardText>
       <VForm
         @submit.prevent="procesarFormulario"
         ref="formulario"
       >
-        <label>Palabra:</label>
+        <label>Word:</label>
         <VTextField 
           v-model="campos.palabra"
           :rules="reglas.campoObligatorio"
           class="mt-2"
         />
-        <label>Definición:</label>
+        <label>Definition:</label>
         <VTextarea 
           v-model="campos.definicion"
           :rules="reglas.campoObligatorio"
           rows="2"
           class="mt-2"
         />
-        <label>Tipo:</label>
+        <label>Type:</label>
         <VSelect 
           v-model="campos.tipo"
           :rules="reglas.campoObligatorio"
@@ -31,7 +31,7 @@
           <VSpacer />
           <VCol cols="auto">
             <VBtn 
-              text="Guardar palabra"
+              text="Save"
               type="submit"
             />
           </VCol>
@@ -58,7 +58,7 @@ const campos = reactive<{
 })
 const reglas = {
   campoObligatorio: [
-    (v: string) => !!v || 'Campo obligatorio!'
+    (v: string) => !!v || 'required!'
   ]
 }
 

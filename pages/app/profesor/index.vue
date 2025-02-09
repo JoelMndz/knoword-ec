@@ -1,6 +1,6 @@
 <template>
   <VContainer>
-    <h1 class="text-h3 text-center">Cuestionarios</h1>
+    <h1 class="text-h3 text-center">Packs</h1>
     <VRow class="mt-5">
       <VCol cols="auto">
         <VBtn
@@ -26,7 +26,7 @@
             <v-list-item 
               link 
               :to="`/app/profesor/cuestionario/detalle/${i._id}`">
-              <v-list-item-title>Ver detalle</v-list-item-title>
+              <v-list-item-title>Details</v-list-item-title>
             </v-list-item>
             <VDialog
               max-width="650"
@@ -34,7 +34,7 @@
               <template #activator="{props}">
                 <v-list-item 
                   v-bind="props">
-                  <v-list-item-title>Ver Resultados</v-list-item-title>
+                  <v-list-item-title>Results</v-list-item-title>
                 </v-list-item>
               </template>
               <CardRespuestasCuestionario 
@@ -47,24 +47,24 @@
               <template #activator="{props}">
                 <v-list-item 
                   v-bind="props">
-                  <v-list-item-title>Eliminar</v-list-item-title>
+                  <v-list-item-title>Delete</v-list-item-title>
                 </v-list-item>
               </template>
               <template #default={isActive}>
                 <VCard
-                  title="Eliminar Cuestionario"
-                  :text="`¿Estas seguro de eliminar el cuestionario '${i.nombre}'?`"
+                  title="Delete pack"
+                  :text="`Are you sure you want to delete?`"
                 >
                   <VCardActions>
 
                     <VBtn 
-                      text="Cancelar"
+                      text="Cancel"
                       color="error"
                       @click="isActive.value = false"
                       variant="tonal"
                     />
                     <VBtn 
-                      text="Confirmar"
+                      text="Save"
                       @click="eliminarCuestionario(i._id!, isActive.value)"
                       variant="tonal"
                     />

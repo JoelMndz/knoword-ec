@@ -1,11 +1,11 @@
 <template>
   <VContainer>
-    <h1 class="text-center mb-4 text-h4">Crear cuestionario</h1>
+    <h1 class="text-center mb-4 text-h4">Create pack</h1>
     <VRow>
       <VSpacer />
       <VCol cols="auto">
         <VBtn 
-          text="Cancelar"
+          text="Cancel"
           to="/app/profesor"
           color="error"
           :readonly="cargando"
@@ -14,7 +14,7 @@
       </VCol>
       <VCol cols="auto">
         <VBtn 
-          text="Guardar cuestionario"
+          text="Save pack"
           :disabled="campos.palabras.length === 0 || !campos.nombre"
           :loading="cargando"
           @click="procesarFormulario"
@@ -24,19 +24,11 @@
     <VRow>
       <VCol>
         <VTextField 
-          label="Nombre"
+          label="Name"
           v-model="campos.nombre"
           :rules="campoRequerido"
         /> 
       </VCol>
-      <!-- <VCol cols="4">
-        <VSelect 
-          label="Categoria"
-          :items="['Arte 🎭','Ciencias 🦠','Matemáticas ➕','Lenguaje 📚']"
-          v-model="campos.categoria"
-          :rules="campoRequerido"
-        />
-      </VCol> -->
     </VRow>
     <VRow align="center">
       <VCol>
@@ -55,7 +47,7 @@
           <VIcon
             icon="mdi-plus"
           />
-          Agregar palabra
+          Add word
         </VBtn>
       </VCol>
     </VRow>
@@ -117,7 +109,7 @@ const campos = reactive<{
 const filtro = ref('')
 
 const campoRequerido = [
-  (v: string) => !!v || 'Campo requerido!'
+  (v: string) => !!v || 'required!'
 ]
 
 const procesarFormulario = ()=>{

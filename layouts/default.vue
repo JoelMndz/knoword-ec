@@ -10,20 +10,20 @@
       <template v-if="usuario?.rol === Rol.Estudiante">
         <VBtn 
           @click="navigateTo('/app/estudiante')"
-          text="Cuestionario"
+          text="Packs"
           variant="text"
           color="black"
         />
         <VBtn 
           @click="navigateTo('/app/estudiante/diccionario')"
-          text="Diccionario"
+          text="Dictionary"
           variant="text"
           class="mx-3"
           color="black"
         />
         <VBtn 
           @click="navigateTo('/app/estudiante/juego-oraciones')"
-          text="Juego Oraciones"
+          text="Sentences"
           variant="text"
           class="mx-3"
           color="black"

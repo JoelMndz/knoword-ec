@@ -10,7 +10,7 @@ interface IBody{
 export default defineEventHandler(async(event)=>{
   const body:IBody = await readBody(event)
   if(await noExisteEmail(body.email))
-    throw createError({status: 400, statusMessage: 'El email ya está registrado!'})
+    throw createError({status: 400, statusMessage: 'The email is already registered!'})
 
   const passwordEncriptada = await encriptarPassword(body.password) 
   const usuario = new UsuarioSchema({

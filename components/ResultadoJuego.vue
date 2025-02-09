@@ -6,15 +6,15 @@
       <VCol>
         <h2 class="text-h5">{{ cuestionarioActual?.nombre }}</h2>
         <div>
-          <h1 class="text-h2 mt-3">BUEN INTENTO</h1>
+          <h1 class="text-h2 mt-3">GOOD TRY</h1>
           <VBtn 
-            text="Ir al inicio"
+            text="Go to home"
             color="error"
             class="mt-4"
             @click="$router.push('/')"
           />
           <VBtn 
-            text="Jugar de nuevo"
+            text="Play again"
             color="secondary"
             class="text-black mt-4 ms-2"
             @click="juegoStore.restablecerValores()"
@@ -31,17 +31,17 @@
           <VCardText>
             <VRow>
               <VCol>
-                <p class="text-grey">Tiempo total</p>
+                <p class="text-grey">Total time</p>
                 <p class="text-h4 ">{{formatearTiempo(resultadoJuego.tiempo)}}</p>
               </VCol>
               <VDivider vertical thickness="3" />
               <VCol cols="auto">
-                <p class="text-grey">Preguntas correctas</p>
+                <p class="text-grey">Correct questions</p>
                 <p class="text-h4 ">{{resultadoJuego.respuestasCorrectas}}/{{ cuestionarioActual?.palabras.length }}</p>
               </VCol>
               <VDivider vertical thickness="3" />
               <VCol>
-                <p class="text-grey">Puntaje</p>
+                <p class="text-grey">Score</p>
                 <p class="text-h4 d-flex align-center justify-center">{{resultadoJuego.puntaje}} <span class="text-h5">💎</span></p>
               </VCol>
             </VRow>

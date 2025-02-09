@@ -8,7 +8,7 @@
             variant="tonal"
             color="success"
             @click="generarOracionesConIA()">
-            <p class="text-md-h2 text-center text-h3 mb-2">Comenzar juego</p>
+            <p class="text-md-h2 text-center text-h3 mb-2">Start game</p>
           </VCard>
         </VCol>
       </VRow>
@@ -23,7 +23,7 @@
             <VCardTitle>
               <VRow align="center">
                 <VCol>
-                  Completa las oraciones
+                  Complete the sentences
                 </VCol>
                 <VSpacer />
                 <VCol cols="auto">
@@ -75,7 +75,7 @@
                     color="primary"
                     class="ma-2 text-body-1"
                     :class="respuestas.find(x => x?.indiceOracion === i.indiceOracion) ? 'text-decoration-line-through':undefined"
-                    :draggable="!respuestas.find(x => x?.indiceOracion === i.indiceOracion)"
+                    draggable
                     @dragstart="empezarArrastrarPalabra(i)"
                   />
                 </VCol>
@@ -87,7 +87,7 @@
               color="error"
               position="relative"
               location="bottom left"
-              text="Terminar Juego"
+              text="End Game"
               @click="juegoOracionesStore.terminarJuego()"
             />
           </VCard>
@@ -106,7 +106,7 @@
     >
       <VListItem
         prepend-icon="mdi-robot-happy-outline"
-        title="Generando Oraciones..."
+        title="Generate sentences..."
       />
     </VList>
   </VDialog>

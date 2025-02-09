@@ -1,11 +1,10 @@
 <template>
   <VCard
-    :title="`Resultados - ${cuestionario.nombre}`"
+    :title="`Results - ${cuestionario.nombre}`"
   >
     <VCardText>
       <VDataTable
         :headers="cabecera"
-        no-data-text="No hay datos"
         :items="resultados"
       >
         <template #item.estudiante="{item}">
@@ -52,10 +51,10 @@ const {cuestionario} = defineProps({
 })
 const resultados = ref<IResultado[]>([])
 const cabecera = [
-  {title:'Estudiante', key: 'estudiante'},
-  {title:'Fecha', key: 'fecha'},
-  {title:'Aciertos', key: 'aciertos'},
-  {title:'Tiempo', key: 'tiempo'},
+  {title:'Student', key: 'estudiante'},
+  {title:'Date', key: 'fecha'},
+  {title:'Hits', key: 'aciertos'},
+  {title:'Time', key: 'tiempo'},
 ]
 
 onMounted(async()=>{

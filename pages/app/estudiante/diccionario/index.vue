@@ -1,6 +1,6 @@
 <template>
   <VContainer>
-    <h1 class="text-h4 text-center">Diccionario</h1>
+    <h1 class="text-h4 text-center">Dictionary</h1>
     <VRow>
       <VCol>
         <VBtn 
@@ -35,18 +35,18 @@
               </template>
               <template #default="{isActive}">
                 <VCard
-                  title="Eliminar palabra"
-                  :text="`¿Estas seguro de eliminar la palabara '${i.nombre}'?`"
+                  title="Delete word"
+                  :text="`Are you sure you want to delete?`"
                 >
                   <VCardActions>
                     <VBtn 
-                      text="Cancelar"
+                      text="Cancel"
                       color="error"
                       @click="isActive.value = false"
                       variant="tonal"
                     />
                     <VBtn 
-                      text="Confirmar"
+                      text="Save"
                       @click="eliminarPalabra(i._id, isActive.value)"
                       variant="tonal"
                     />
@@ -56,7 +56,7 @@
             </VDialog>
             <VSpacer />
             <VBtn 
-              text="Reproducir" 
+              text="Play" 
               variant="tonal"
               append-icon="mdi-music"
               @click="reproducirPalabra(i)"

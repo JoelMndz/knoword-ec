@@ -48,14 +48,14 @@
       <div style="width: 100%;">
         <input 
           v-model="respuesta"
-          :placeholder="`Empieza con ${palabraActual?.palabra[0]}`"
+          :placeholder="`Starts with ${palabraActual?.palabra[0]}`"
           autofocus
           type="text">
       </div>
     </VCol>
     <VCol cols="4" md="3">
       <VBtn
-        text="Siguiente"
+        text="Next"
         block
         variant="tonal"
         size="x-large"

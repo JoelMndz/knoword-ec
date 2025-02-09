@@ -1,19 +1,19 @@
 <template>
   <VCard
-    title="Agregar palabra al diccionario"
+    title="Add word to dictionary"
   >
     <VCardText>
       <VForm
         @submit.prevent="procesarFormulario"
         ref="formulario"
       >
-        <label>Palabra:</label>
+        <label>Word:</label>
         <VTextField 
           v-model="campos.nombre"
           :rules="reglas.campoObligatorio"
           class="mt-2"
         />
-        <label>Definición:</label>
+        <label>Definition:</label>
         <VTextarea 
           v-model="campos.definicion"
           :rules="reglas.campoObligatorio"
@@ -24,7 +24,7 @@
           <VSpacer />
           <VCol cols="auto">
             <VBtn 
-              text="Guardar palabra"
+              text="Save"
               type="submit"
               :loading="cargando"
             />
@@ -48,7 +48,7 @@ const campos = reactive({
 
 const reglas = {
   campoObligatorio: [
-    (v: string) => !!v || 'Campo obligatorio!'
+    (v: string) => !!v || 'required!'
   ]
 }
 

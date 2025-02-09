@@ -25,24 +25,24 @@
                 v-model="campos.email"
                 type="email"
                 class="mt-2"
-                placeholder="Ingresa tu email"
+                placeholder="Enter your email"
                 
               />
               <label>Password:</label>
               <InputPassword 
                 v-model:model.trim="campos.password"
                 class="mt-2"
-                placeholder="Ingresa la contraseña"
+                placeholder="Enter your password"
               />
               <VBtn 
-                text="Ingresar"
+                text="Login"
                 class="py-6"
                 block
                 type="submit"
                 :loading="cargando"
               />
               <VBtn
-                text="Crear cuenta"
+                text="Create account"
                 to="/registro"
                 block
                 class="mt-3"
@@ -81,7 +81,7 @@ const procesarFormulario = async()=>{
   if(data.value){
     navigateTo('/app/'+(data.value as SessionType).rol)
   }else{
-    error.value = 'Credenciales incorrectas!'
+    error.value = 'Incorrect credentials!'
   }
 }
 

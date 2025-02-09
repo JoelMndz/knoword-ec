@@ -21,13 +21,6 @@ export const useJuegoOracionesStore = defineStore('juegoOracionesStore',{
   actions:{
     async generarOracionesConIA(){
       this.cargandoOraciones = true
-      // await new Promise((resolve) =>{
-      //   setTimeout(()=>{
-      //     resolve(()=>{
-            
-      //     })
-      //   }, 2000)
-      // })
       this.oraciones = await $fetch('/api/generar-oraciones')
       this.respuestas = Array.from({length: this.oraciones.length}).map(x => null)
       this.palabrasPorCompletar = []
@@ -47,6 +40,12 @@ export const useJuegoOracionesStore = defineStore('juegoOracionesStore',{
       this.cargandoOraciones = false
     },
     agregarRespuesta(indiceOracion: number, palabraArrastrada: IPalabraPorCompletar){
+      this.respuestas = (this.respuestas.map(x =>
+          x?.indiceOracion === palabraArrastrada.indiceOracion && 
+          x.palabra === palabraArrastrada.palabra && 
+          x.posicion === palabraArrastrada.posicion ?
+            null : x
+      ) as IPalabraPorCompletar[] | null[])
       this.respuestas[indiceOracion] = {...palabraArrastrada!}
       if(this.respuestas.find(x => !x) === undefined){
         if(this.respuestas.filter((x,i) => x?.indiceOracion !== i).length === 0){

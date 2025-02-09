@@ -3,7 +3,7 @@
     <VRow style="height: 90vh;" justify="center" align="center">
       <VCol cols="9" md="7" lg="5">
         <VCard class="pa-5">
-          <VCardTitle class="text-h4">Crear cuenta</VCardTitle>
+          <VCardTitle class="text-h4">Create account</VCardTitle>
           <VCardText>
             <VForm
               ref="formulario"
@@ -15,13 +15,13 @@
                 :texto="error"
                 class="mb-3"
               />
-              <label>Nombre:</label>
+              <label>Name:</label>
               <VTextField 
                 v-model.trim="campos.nombre"
                 type="text"
                 class="mt-2"
                 :rules="reglas.nombre"
-                placeholder="Ingresa tu nombre"
+                placeholder="Enter your name"
               />
               <label>Email:</label>
               <VTextField 
@@ -29,30 +29,32 @@
                 type="email"
                 class="mt-2"
                 :rules="reglas.email"
-                placeholder="Ingresa tu email"
+                placeholder="Enter your email"
               />
               <label>Password:</label>
               <InputPassword 
                 v-model:model.trim="campos.password"
                 class="mt-2"
-                placeholder="Ingresa la contraseña"
+                placeholder="Enter your email"
                 :rules="reglas.password"
               />
-              <label>Eres un:</label>
+              <label>I am a:</label>
               <VSelect 
                 v-model="campos.rol"
-                :items="Object.values(Rol)"
+                :items="[{value:Rol.Estudiante,label:'Student'},{value:Rol.Profesor,label:'Teacher'}]"
                 class="mt-2"
+                item-title="label"
+                item-value="value"
               />
               <VBtn 
-                text="Registrarse"
+                text="Sign up"
                 class="py-6"
                 block
                 type="submit"
                 :loading="cargando"
               />
               <VBtn
-                text="¿Ya tienes cuenta?"
+                text="Already have an account?"
                 to="/"
                 block
                 class="mt-3"
@@ -81,13 +83,13 @@ const campos = reactive({
 const cargando = ref(false)
 const reglas = {
   nombre: [
-    (v: string) => v.length >= 4 || 'Mínimo 4 caracteres'
+    (v: string) => v.length >= 4 || 'Minimum 4 characters'
   ],
   email: [
-    (v: string) => /.+@.+\..+/.test(v) || 'El email no tiene el formato correcto!'
+    (v: string) => /.+@.+\..+/.test(v) || 'The email is not in the correct format!'
   ],
   password: [
-    (v: string) => v.length >= 8 || 'Mínimo 8 caracteres'
+    (v: string) => v.length >= 8 || 'Minimum 8 characters'
   ]
 }
 

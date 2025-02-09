@@ -16,7 +16,7 @@
           <VIcon
             icon="mdi-plus"
           />
-          Agregar palabra
+          Add word
         </VBtn>
       </VCol>
     </VRow>
@@ -43,18 +43,18 @@
                 </template>
                 <template #default="{isActive}">
                   <VCard
-                    title="Eliminar palabra"
-                    :text="`¿Estas seguro de eliminar la palabara '${i.palabra}'?`"
+                    title="Delete word"
+                    :text="`Are you sure you want to delete?`"
                   >
                     <VCardActions>
                       <VBtn 
-                        text="Cancelar"
+                        text="Cancel"
                         color="error"
                         @click="isActive.value = false"
                         variant="tonal"
                       />
                       <VBtn 
-                        text="Confirmar"
+                        text="Save"
                         @click="eliminarPalabra(indice,i, isActive.value)"
                         variant="tonal"
                       />
@@ -66,7 +66,7 @@
           </VCard>
         </VCol>
         <VCol v-else>
-          <p>No hay preguntas</p>
+          <p>No questions</p>
         </VCol>
       </TransitionGroup>
     </VRow>
