@@ -78,6 +78,15 @@
         @procesar-formulario="agregarPalabra"
       />
     </VDialog>
+    <v-fab
+      icon="mdi-arrow-left"
+      class="ms-4 mb-4"
+      location="top start"
+      size="54"
+      @click="navigateTo('/')"
+      absolute
+      app
+    />
   </VContainer>
 </template>
 
