@@ -12,7 +12,7 @@
       <template v-if="usuario?.rol === Rol.Estudiante">
         <VBtn 
           @click="navigateTo('/app/estudiante')"
-          text="Packs"
+          text="Questionnaries"
           variant="text"
           color="black"
         />

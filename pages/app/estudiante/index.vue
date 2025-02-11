@@ -1,6 +1,6 @@
 <template>
   <VContainer>
-    <h2 class="text-h4 text-center mt-5">Packs</h2>
+    <h2 class="text-h4 text-center mt-5">Published questionnaries</h2>
     <VRow class="mt-5">
       <VCol cols="6" sm="4" md="3" v-for="i in (data as ICuestionario[])">
         <CardCuestionario

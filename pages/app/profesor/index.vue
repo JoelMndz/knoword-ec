@@ -1,6 +1,6 @@
 <template>
   <VContainer>
-    <h1 class="text-h3 text-center">Packs</h1>
+    <h1 class="text-h3 text-center">Published questionnaries</h1>
     <VRow class="mt-5">
       <VCol cols="auto">
         <VBtn
