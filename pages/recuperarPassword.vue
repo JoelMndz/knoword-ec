@@ -33,6 +33,7 @@
               color="error"
               width="400"
               block
+              @click="navigateTo('/')"
               >Go to login</v-btn
             >
         </v-form>
