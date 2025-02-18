@@ -18,6 +18,9 @@
             :rules="rules.email"
             required
             />
+            <VRow justify="end" class="mb-2 me-2">
+                <NuxtLink to="/">Go to login</NuxtLink>
+              </VRow>
             <v-btn
               type="submit"
               variant="tonal"

@@ -35,7 +35,7 @@
                 placeholder="Enter your password"
               />
               <VRow justify="end" class="mb-3">
-                <NuxtLink to="/recuperarPassword">¿Olvidó su contraseña?</NuxtLink>
+                <NuxtLink to="/recuperarPassword">¿Forgot password?</NuxtLink>
               </VRow>
               <VBtn 
                 text="Login"
