@@ -46,7 +46,7 @@
                       variant="tonal"
                     />
                     <VBtn 
-                      text="Save"
+                      text="Delete"
                       @click="eliminarPalabra(i._id, isActive.value)"
                       variant="tonal"
                     />
