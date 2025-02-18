@@ -34,6 +34,9 @@
                 class="mt-2"
                 placeholder="Enter your password"
               />
+              <VRow justify="end" class="mb-3">
+                <NuxtLink to="/recuperarPassword">¿Olvidó su contraseña?</NuxtLink>
+              </VRow>
               <VBtn 
                 text="Login"
                 class="py-6"
