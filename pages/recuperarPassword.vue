@@ -18,9 +18,6 @@
             :rules="rules.email"
             required
             />
-            <VRow justify="end" class="mb-2 me-2">
-                <NuxtLink to="/">Go to login</NuxtLink>
-              </VRow>
             <v-btn
               type="submit"
               variant="tonal"
@@ -29,6 +26,14 @@
               width="400"
               :loading="loading"
               >Restore</v-btn
+            >
+            <v-btn
+              variant="tonal"
+              class="mt-2"
+              color="error"
+              width="400"
+              block
+              >Go to login</v-btn
             >
         </v-form>
       </VCard>
