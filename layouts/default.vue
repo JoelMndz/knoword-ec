@@ -32,12 +32,34 @@
         />
       </template>
       <template v-if="data" #append>
-        <VBtn
-          class="me-3"
-          prepend-icon="mdi-account"
-          color="dark"
-          :text="(data as SessionType).nombre"
-        />
+        <VMenu>
+          <template #activator="{props}">
+            <VBtn
+              v-bind="props"
+              class="me-3"
+              prepend-icon="mdi-account"
+              color="dark"
+              :text="(data as SessionType).nombre"
+            />
+          </template>
+          <template #default="{isActive}">
+            <VDialog
+              persistent
+              max-width="450"
+            >
+              <template #activator="{props}">
+                <VList>
+                  <VListItem v-bind="props">Change Password</VListItem>
+                </VList>
+              </template>
+              <template #default>
+                <FormCambiarPassword 
+                  :cerrar-formulario="()=> {isActive.value = false}"
+                />
+              </template>
+            </VDialog>
+          </template>
+        </VMenu>
         <VBtn 
           color="error"
           icon="mdi-logout"
